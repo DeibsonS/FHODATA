@@ -27,7 +27,7 @@ if pd.isna(y).any():
     print("y contém valores NaN. Limpando os dados...")
 
     # Opção 2: Imputar valores NaN
-    imputer = SimpleImputer(strategy='valores')
+    imputer = SimpleImputer(strategy='mean')
     y_clean = imputer.fit_transform(np.array(y).reshape(-1, 1)).ravel()
 
     # Ajustar o modelo
