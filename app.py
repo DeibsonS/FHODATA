@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
+from sklearn.impute import SimpleImputer
 
 # carregando dataset
 df = pd.read_csv("DBcarros.csv")
@@ -20,7 +21,21 @@ x = df['acceleration']
 x = np.array(x).reshape(-1, 1)
 
 modelo = LinearRegression()
-modelo.fit(x, y)
+
+# Verificar valores NaN em y
+if pd.isna(y).any():
+    print("y contém valores NaN. Limpando os dados...")
+
+    # Opção 2: Imputar valores NaN
+    imputer = SimpleImputer(strategy='valores')
+    y_clean = imputer.fit_transform(np.array(y).reshape(-1, 1)).ravel()
+
+    # Ajustar o modelo
+    modelo.fit(x, y_clean)
+else:
+    # Ajustar o modelo se não houver valores NaN
+    modelo.fit(x, y)
+
 
 coef_angular = modelo.coef_
 coef_linear = modelo.intercept_
