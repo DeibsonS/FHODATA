@@ -6,7 +6,7 @@ Utilizaremos a linguagem Python devido à sua poderosa biblioteca e ampla utiliz
 Com o objetivo:
 
 Explorar Conceitos Teóricos e Discutir os fundamentos teóricos da manipulação de dados e das técnicas.
-Implementação de Algoritmos: Desenvolver e implementar algoritmos utilizando Python para manipular e analisar conjuntos de dados diversos, correlação e regressão linear são algumas das tecnicas a serem utilziadas.
+Implementação de Algoritmos: Desenvolver e implementar algoritmos utilizando Python para manipular e analisar conjuntos de dados diversos, correlação e regressão linear são algumas das tecnicas a serem utilizadas.
 Projetos Práticos: Colaborar em projetos que envolvem a aplicação prática das técnicas, promovendo a resolução de problemas internos e externos da instituição.
 
 Junte-se a nós e venha explorar as infinitas possibilidades da manipulação de dados com Python!
